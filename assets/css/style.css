@@ -1,0 +1,106 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    /* set chủng font cho toàn bộ thẻ */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+1. vị trí
+2.Kích thước(ưidth, height)
+3. Màu sắc
+4. Kiểu dáng(kiểu chữ, hình tròn, vuông,..)
+*/
+
+#main {
+
+}
+
+#header {
+    /* set chiều cao cho thẻ header */
+    height: 46px;
+    /* màu nên của nó là màu đen */
+    background: #000;
+}
+
+#nav, .subnav {
+    /* để loại bỏ dấu chấm đầu dòng khi nó có dạng danh sách */
+    list-style-type: none;
+}
+
+#nav > li {
+    /* thẻ li là thẻ danh sách vì vậy nó luôn nằm một hàng dọc
+    để chuyển nó sang một hàng ngang */
+    display: inline-block;
+}
+
+#nav li {
+    /* thẻ li khai báo position: relative bởi vì
+    để khi khai báo subnav là position: absolute 
+    để nó là điểm cố định của so với thằng subnav */
+    position: relative;
+}
+/* thẻ a cấp 1:
+ thẻ này dùng để Css nội dung của thẻ a của cấp cha thôi, cấp con thì không được */
+#nav > li > a {
+    /* chữ màu trắng */
+    color: #fff;
+    /* toàn bộ chữ là in hoa */
+    text-transform: uppercase;
+}
+/* thẻ a cả cập 1 lẫn cấp 2:
+thẻ này dùng để Css nội dung của thẻ a của cả cấp con lẫn cấp cha */
+#nav li a {
+/* loại bỏ gạch chân của nôi dung của thẻ a:
+vì thẻ a thẻ link nên mặc định nó luôn có gạch chân */
+    text-decoration: none;
+/* đây là khoảng cách so với phần tử trên và dưới.
+tại sao mà chúng ta phải sử dùng line-height mà sao không sử dụng padding 
+ở dưới để căn khoảng cách luôn: bởi vì để trường hợp con trỏ dễ dàng trỏ đến toàn bộ
+nội dung cả thẻ a luôn, và bằng chiều cao của header */
+    line-height: 46px;
+/* đây là khoảng cách trái phải giữa các thẻ a */
+    padding: 0 24px;
+    /* khi nó có tính chất khối thì thẻ a chiếm toàn bộ kích thước */
+    display: block;
+}
+
+/* thẻ tạo hiệu ứng khi hover vào thẻ a */
+#nav .subnav li:hover a,
+#nav > li:hover > a {
+    /* chữ vẫn sẽ là màu đen */
+    color: #000;
+    /* màu nên sẽ chuyển sang màu sám */
+    background-color:#ccc ;
+}
+
+#nav .subnav {
+    /* nó nằm vị trí tương đối so với thẻ cha tuyệt đối */
+    position: absolute;
+    /* màu nên của nó có màu trắng */
+    background-color: #fff;
+
+}
+
+#nav .subnav a {
+    /* chữ của thẻ a có màu đen */
+    color: #000;
+}
+
+#slider {
+    min-height: 500px;
+    background-color: #000;
+
+}
+
+#content {
+
+}
+
+#footer {
+
+}
